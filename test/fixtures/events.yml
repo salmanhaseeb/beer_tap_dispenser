@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_type: MyString
+  event_time: 2023-07-26 19:46:54
+  total_spend: 1.5
+  dispenser: one
+
+two:
+  event_type: MyString
+  event_time: 2023-07-26 19:46:54
+  total_spend: 1.5
+  dispenser: two
