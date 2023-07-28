@@ -1,24 +1,56 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Clone the repository
 
-Things you may want to cover:
+```sh
+git clone git@github.com:salmanhaseeb/beer_tap_dispenser.git
+```
 
-* Ruby version
+Run bundle command and setup the project.
 
-* System dependencies
+```sh
+bundle install
+rails db:create db:migrate
+```
 
-* Configuration
+I have already created an admin in the seed file with an API key.
 
-* Database creation
+```sh
+rails db:seed
+```
 
-* Database initialization
+Run the project.
 
-* How to run the test suite
+```sh
+rails server
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+To test the application.
 
-* Deployment instructions
+```sh
+rspec
+```
 
-* ...
+# Technical Decisions
+
+## 1. Authentication
+
+I have added basic API authentication for the admins for admin-related activities. This is not done using `Devise` as I didn't want the app to use anything that is not suitable. This is a very basic implementation as the only task for the admin is to create dispenser, refill it and do some initial settings, so no session is needed.
+
+## 2. Code Quality
+
+I have used `Rubocop` Gem to make sure the code is of the highest quality.
+
+## 3. Testing
+
+I have used the most commonly used gems `rspec`, `faker`, and `factory_bot`. All the services, controllers and models are tested.
+
+## 4. Service/Object Design Pattern
+
+I have used services where needed.
+
+## API Endpoints
+
+The video demo is here.
+
+https://watch.screencastify.com/v/yDLoYTut0AVZKA1uuqC4
